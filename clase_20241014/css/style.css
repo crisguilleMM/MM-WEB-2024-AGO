@@ -48,3 +48,16 @@
     div:first-child {
         color: red;
     }
+
+    div:nth-child(2) {
+        background: cyan;
+    }
+    /*ojo con last child*/
+    /*div:last-child{
+        color: blue;
+        font-weight: bold;
+        background-color: chartreuse;
+    }*/
+    div:last-of-type {
+        background: rgb(10, 1, 136);
+    }
