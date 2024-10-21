@@ -1,0 +1,46 @@
+body{
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+header#mainHeader{
+    background-color: darkkhaki;
+}
+section.logo img{
+   width: 100px;
+   /*Que tramsiciona*/
+   transition-property: all;
+    /* Propiedades a animar */
+    transition-duration: 2s;
+    /* Duración de la transición */
+    transition-timing-function: ease;
+    /* Función de tiempo de la transición */
+    transition-delay: 0s;
+    cursor: zoom-in; 
+}
+
+section.logo img:hover{
+    width: 120px;
+}
+.principal{
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+}
+.category{
+    margin-right: 10px; 
+}
+.category a{
+    display: block; 
+    background-color: #ddff00; 
+    color: #9d0000; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease; /* Para una transición suave */
+}
+
+.category a:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
+}
