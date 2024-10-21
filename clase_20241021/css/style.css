@@ -1,0 +1,87 @@
+body{
+    top:0;
+    left: 0;
+    margin: 0;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* transition-property: width, height, background-color; */
+    transition-property: all;
+    /* Propiedades a animar */
+    transition-duration: 2s;
+    /* Duración de la transición */
+    transition-timing-function: ease;
+    /* Función de tiempo de la transición */
+    transition-delay: 0s;
+    /* Retraso antes de la transición */
+
+    /*Separacion de las cajas*/
+    padding: 0 0 10px;
+    margin: 0 0 10px;
+    color: #000;
+}
+
+/*final*/
+.box:hover {
+    width: 150px; /*estaba en 200 pero era muy grande*/
+    /* Nuevo ancho */
+    height: 200px;
+    /* Nueva altura */
+    background-color: blue;
+    /* Nuevo color de fondo */
+    color: #fff;
+    /*Nuevo color Letra*/
+}
+
+
+.box-redondeado {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition-property: width, height, background-color, border-radius;
+    
+    /* Propiedades a animar */
+    transition-duration: 1s;
+    /* Duración de la transición */
+    transition-timing-function: ease;
+    /* Función de tiempo de la transición */
+    transition-delay: 0s;
+    /* Retraso antes de la transición */
+}
+
+.box-redondeado:hover {
+    background-color: #0000ff;
+    border-radius: 75px;
+}
+
+.temporizador {
+    height: 50px;
+    width: 100px;
+    background-color: #fff344;
+    transition: all 3s linear;
+    line-height: 50px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.temporizador.ease {
+    transition: all 3s ease;
+}
+.temporizador.ease-in {
+    transition: all 3s ease-in;
+}
+.temporizador.ease-in-out {
+    transition: all 3s ease-in-out;
+}
+.temporizador.ease-out {
+    transition: all 3s ease-out;
+}
+#tContainer{
+    width: 400px;
+    background-color: coral;
+}
+#tContainer:hover .temporizador{
+    width: 100%;
+}
