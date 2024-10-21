@@ -1,0 +1,73 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition-property: width, height, background-color;
+    /* Propiedades a animar */
+    transition-duration: 1s;
+    /* Duración de la transición */
+    transition-timing-function: ease;
+    /* Función de tiempo de la transición */
+    transition-delay: 0s;
+    /* Retraso antes de la transición */
+}
+
+/*final*/
+.box:hover {
+    width: 200px;
+    /* Nuevo ancho */
+    height: 200px;
+    /* Nueva altura */
+    background-color: blue;
+    /* Nuevo color de fondo */
+}
+
+
+.box-redondeado {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition-property: width, height, background-color;
+    /* Propiedades a animar */
+    transition-duration: 1s;
+    /* Duración de la transición */
+    transition-timing-function: ease;
+    /* Función de tiempo de la transición */
+    transition-delay: 0s;
+    /* Retraso antes de la transición */
+}
+
+.box-redondeado:hover {
+    background-color: #0000ff;
+    border-radius: 75px;
+}
+
+.temporizador {
+    height: 50px;
+    width: 100px;
+    background-color: #fff344;
+    transition: all 1s linear;
+    line-height: 50px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.temporizador.ease {
+    transition: all 1s ease;
+}
+.temporizador.ease-in {
+    transition: all 1s ease-in;
+}
+.temporizador.ease-in-out {
+    transition: all 1s ease-in-out;
+}
+.temporizador.ease-out {
+    transition: all 1s ease-out;
+}
+#tContainer{
+    width: 400px;
+    background-color: coral;
+}
+#tContainer:hover .temporizador{
+    width: 100%;
+}
