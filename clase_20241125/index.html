@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Javascript</title>
+</head>
+
+<body>
+    <!--Empieza data seleccion-->
+    <label for="clima">Seleccione el tipo de clima de hoy: </label>
+    <select id="clima">
+        <option value="">--Haga una elección--</option>
+        <option value="soleado">Soleado</option>
+        <option value="lluvioso">Lluvioso</option>
+        <option value="nevando">Nevando</option>
+        <option value="nublado">Nublado</option>
+    </select>
+    <label for="temperatura">Escriba Temperatura: </label>
+    <input value="" type="number">
+
+
+    <p>------------------</p>
+
+    <script>
+        let seleccionar = document.querySelector('select');
+        let parrafo = document.querySelector('p');
+        let tempInput = document.querySelector('input')
+
+        seleccionar.addEventListener('change', establecerClima);
+        tempInput.addEventListener('change', establecerClima);
+
+        function establecerClima() {
+
+            let eleccion = seleccionar.value;
+            let temperatura = tempInput.value;
+
+            if (eleccion === 'soleado' && temperatura != '') {
+                if (temperatura < 30) {
+                    parrafo.textContent = `Está a ` + temperatura + ` grados
+afuera — agradable y soleado. Vamos a la playa, o al parque, y
+comer helado.`;
+                } else if (temperatura >= 30) {
+                    parrafo.textContent = `Está a ` + temperatura + ` grados
+afuera — ¡QUÉ CALOR! Si deseas salir, asegúrate de aplicarte
+bloqueador solar.`;
+                }
+            } else if (eleccion === 'lluvioso') {
+                parrafo.textContent = 'Está lloviendo, tome un abrigo para lluvia y un paraguas, y no se quede por fuera mucho tiempo.';
+            } else if (eleccion === 'nevando') {
+                parrafo.textContent = 'Está nevando ─ ¡está congelando!Lo mejor es quedarse en casa con una taza caliente de                 chocolate, o hacer un muñeco de nieve.';
+            } else if (eleccion === 'nublado') {
+                parrafo.textContent = 'No está lloviendo, pero el cielo está gris y nublado; podría llover en cualquier momento, así que lleve un saco solo por si acaso.';
+            } else {
+                parrafo.textContent = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
