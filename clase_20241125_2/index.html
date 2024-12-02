@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Javascript</title>
+</head>
+
+<body>
+    <!--Empieza data seleccion-->
+    <label for="clima">Seleccione el tipo de clima de hoy: </label>
+    <select id="clima">
+        <option value="">--Haga una elección--</option>
+        <option value="3">Nevando</option>
+        <option value="4">Nublado</option>
+        <option value="1">Soleado</option>
+        <option value="2">Lluvioso</option>
+        
+    </select>
+    <label for="temperatura">Escriba Temperatura: </label>
+    <input value="" type="number">
+
+
+    <p>------------------</p>
+
+    <script>
+        let seleccionar = document.querySelector('select');
+        let parrafo = document.querySelector('p');
+        let tempInput = document.querySelector('input')
+
+        seleccionar.addEventListener('change', establecerClima);
+        tempInput.addEventListener('change', establecerClima);
+
+        function establecerClima() {
+
+            let eleccion = seleccionar.value;
+            let temperatura = tempInput.value;
+            switch (eleccion) {
+                case '1':
+                    parrafo.textContent = `El día esta agradable y
+soleado hoy. ¡Use pantalones cortos! Ve a la playa o al
+parque y come un helado.`;
+                    break;
+                case '2':
+                    parrafo.textContent = `Está lloviendo, tome un
+abrigo para lluvia y un paraguas, y no se quede por fuera
+mucho tiempo.`;
+                    break;
+                case '3':
+                    parrafo.textContent = `Está nevando ─ ¡está
+congelando! Lo mejor es quedarse en casa con una taza
+caliente de chocolate, o hacer un muñeco de nieve.`;
+                    break;
+                case '4':
+                    parrafo.textContent = `No está lloviendo, pero el
+cielo está gris y nublado; podría llover en cualquier
+momento, así que lleve un saco solo por si acaso.`;
+                    break;
+                default:
+                    parrafo.textContent = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
