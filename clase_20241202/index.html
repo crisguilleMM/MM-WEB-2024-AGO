@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Javascript Jquery</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--Comentamos el document write para incluid de una manera mas segura-->
+    <!--<script>window.jQuery || document.write('<script src="/js/jquery-last.min.js"><\/script>')</script>-->
+    <script>
+        // Verificar si jQuery no se cargó correctamente
+        if (typeof jQuery == 'undefined') {
+            var script = document.createElement('script');
+            script.src = '/js/jquery.last.min.js';
+            script.type = 'text/javascript';
+            //script.crossOrigin = 'anonymous'; // Asegura la verificación de CORS
+            script.defer = true; // Evita bloquear el renderizado
+            document.head.appendChild(script);
+        }
+    </script>
+    <ul>
+        <li><a href="https://google.com">Link a google</a></li>
+        <li><a id="yahoo" href="https://yahoo.com">Link a yahoo</a></li>
+        <li><a href="https://msn.com">
+            <script>
+                document.write("<script>alert(dw alert)</script>");
+            </script>
+        </a></li>
+        <li><a class="linkEspecial" href="https://mm2024.com">Link a link 3</a></li>
+        <li><a href="https://mipagina.com">Link a link 4</a></li>
+        <li><a class="linkEspecial" href="https://otrapagina.com">Link a link 5</a></li>
+    </ul>
+    
+    
+    
+    
+    
+    
+
+    <script type="text/javascript">
+        $(function () {
+            //Nuestro código
+            alert('Página cargada');
+            console.log('Página cargada');
+        });
+        /*$("a").click(function (e) {
+            e.preventDefault();
+            alert("Mi Alerta se hizo click en el a");
+        });*/
+        $("a").on('click',function (e) {
+            e.preventDefault();
+            alert("Mi Alerta se hizo click en el a al link: "+this.href) ;
+        });
+        //Selector por id
+        $('#yahoo').off('click').on('click',function(e){
+            e.preventDefault();
+            alert('click en yahoooooooo');
+        });
+
+        //Selector por clase
+        $('.linkEspecial').off('click').on('click',function(e){
+            e.preventDefault();
+            alert('click en linkEspecial');
+        });
+        //Varios estilos a la vez
+        $('.linkEspecial').css(
+            {
+             'color':'red',
+            'font-weight':'bold'
+        });
+    </script>
+</body>
+
+</html>
