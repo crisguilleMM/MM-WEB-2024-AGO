@@ -1,0 +1,10 @@
+Endpoint example page:
+https://reqres.in/
+
+Listado usuarios
+/api/users?page=2
+/api/users?page=2&per_page=xxx
+
+
+Harry Potter
+https://hp-api.onrender.com/?ref=apislist.com

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo asyncronico</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <h1>Personajes de Harry Potter</h1>
+    <button id="loadCharacters">Cargar Characters</button>
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="spinner" style="display: none;">
+        <div class="spinner-circle"></div>
+        <p>Cargando personajes...</p>
+    </div>
+
+    <!-- Template -->
+    <div id="characterTemplate" class="character" style="display: none;">
+        <img src="" alt="Character Image" class="character-image">
+        <div>
+            <h2 class="character-name"></h2>
+            <p><strong>House:</strong> <span class="character-house"></span></p>
+            <p><strong>Patronus:</strong> <span class="character-patronus"></span></p>
+            <p><strong>Actor:</strong> <span class="character-actor"></span></p>
+        </div>
+    </div>
+
+    <!-- Container for characters -->
+    <div id="charactersContainer"></div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
