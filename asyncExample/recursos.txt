@@ -7,4 +7,4 @@ Listado usuarios
 
 
 Harry Potter
-https://hp-api.onrender.com/?ref=apislist.com
+https://hp-api.onrender.com/
